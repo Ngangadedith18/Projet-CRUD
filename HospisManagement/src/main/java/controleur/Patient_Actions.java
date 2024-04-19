@@ -9,6 +9,7 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+import javax.swing.JOptionPane;
 import modele.patient;
 
 /**
@@ -27,6 +28,7 @@ public class Patient_Actions {
         try {
             //execution
             cb.st.executeUpdate(rep);
+            JOptionPane.showMessageDialog(null, "Le patient est ajouté avec succès");
         } catch (SQLException ex) {
             Logger.getLogger(Patient_Actions.class.getName()).log(Level.SEVERE, null, ex);
         }
@@ -57,6 +59,7 @@ public class Patient_Actions {
         String rep="Delete from patient where codeP='"+codeP+"'";
         try {
             cb.st.executeUpdate(rep);
+            JOptionPane.showMessageDialog(null, "Patient supprimé avec succès");
         } catch (SQLException ex) {
             Logger.getLogger(Patient_Actions.class.getName()).log(Level.SEVERE, null, ex);
         }

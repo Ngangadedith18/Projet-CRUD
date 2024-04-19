@@ -9,6 +9,7 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+import javax.swing.JOptionPane;
 import modele.dossier;
 
 /**
@@ -27,6 +28,7 @@ public class Dossier_Actions {
         try {
             //execution
             cb.st.executeUpdate(rep);
+            JOptionPane.showMessageDialog(null, "Dossier ajouté avec succès");
         } catch (SQLException ex) {
             Logger.getLogger(Dossier_Actions.class.getName()).log(Level.SEVERE, null, ex);
         }
@@ -56,6 +58,7 @@ public class Dossier_Actions {
     
         try {
             cb.st.executeUpdate(rep);
+            JOptionPane.showMessageDialog(null,"Dossier supprimé avec succès");
             //methode Dossier_Find
             
             //methode Dossier_Liste
